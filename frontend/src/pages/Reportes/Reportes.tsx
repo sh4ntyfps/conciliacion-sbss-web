@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { reporteApi } from '../../api/axios';
-import { FileSpreadsheet, FileText, Printer, Search, CalendarDays, FileBarChart, AlertTriangle, CheckCircle, XCircle, Clock } from 'lucide-react';
+import { FileSpreadsheet, FileText, Printer, Search, CalendarDays, FileBarChart, CheckCircle, XCircle, Clock } from 'lucide-react';
 
 export default function Reportes() {
   const [fechaInicio, setFechaInicio] = useState('');

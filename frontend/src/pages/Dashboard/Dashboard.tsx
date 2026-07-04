@@ -2,12 +2,12 @@ import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { dashboardApi } from '../../api/axios';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { AlertTriangle, FileText, CheckCircle, XCircle, Clock, Archive, TrendingUp, ChevronDown, ChevronUp, Eye, Gavel } from 'lucide-react';
+import { AlertTriangle, FileText, CheckCircle, XCircle, Clock, Archive, ChevronDown, Eye, Gavel } from 'lucide-react';
 
 function AnimatedNumber({ value, duration = 800 }: { value: number; duration?: number }) {
   const [display, setDisplay] = useState(0);
   const prev = useRef(0);
-  const raf = useRef<number>();
+  const raf = useRef<number | null>(null);
 
   useEffect(() => {
     if (value === display) return;
